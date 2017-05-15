@@ -11,10 +11,17 @@ const App = ({
   favourites
 }) => (
   <div>
-    <img src={thumbnailUrl} alt="Thumbnail Image" width="100" height="100" />
-    <input type="text" value={name} onChange={updateName} />
+    <img src={thumbnailUrl} alt="Thumbnail Image" height="100" />
+    <div>
+      <input type="text" value={name} onChange={updateName} />
+    </div>
     <form onSubmit={addListEntry}>
-      <input type="text" value={favouriteText} onChange={updateFavouriteText} />
+      <input
+        type="text"
+        value={favouriteText}
+        onChange={updateFavouriteText}
+        placeholder="add new item here …"
+      />
       <button type="submit">Add</button>
     </form>
     {favourites.map((favourite, index) => (
