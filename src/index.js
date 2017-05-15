@@ -1,19 +1,43 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import withDefaultCountProp from './withDefaultCountProp';
+import withMinLengthValidation from './withMinLengthValidation';
 
-const Counter = ({ count }) => (
-  <div>Count: {count}</div>
+const TextInput = (props) => (
+  <input type="text" {...props} />
 )
 
-const CounterWithDefaultTwelve = withDefaultCountProp(Counter, 12);
-
-const App = () => (
-  <div>
-    <CounterWithDefaultTwelve />
-    <CounterWithDefaultTwelve count={22} />
-  </div>
+const NumberInput = (props) => (
+  <input type="number" {...props} />
 )
+
+const TextInputWithValidation = withMinLengthValidation(TextInput, 4)
+const NumberInputWithValidation = withMinLengthValidation(NumberInput, 3)
+
+class App extends Component {
+  state = {
+    text: '',
+    number: 42,
+  }
+
+  updateText = (evt) => { this.setState({ text: evt.target.value }) }
+
+  updateNumber = (evt) => { this.setState({ number: evt.target.value }) }
+
+  render() {
+    return (
+      <div>
+        <TextInputWithValidation
+          value={this.state.text}
+          onChange={this.updateText}
+        />
+        <NumberInputWithValidation
+          value={this.state.number}
+          onChange={this.updateNumber}
+        />
+      </div>
+    )
+  }
+}
 
 ReactDOM.render(
   <App />,

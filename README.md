@@ -5,18 +5,18 @@ This lab is split into three parts which can be found in these branches:
 - 2-2-hoc
 - 2-3-hoc
 
-# Part 2
+# Part 3
 
-Your task in this lab is to create a simple higher order component to set a default property `count`. The default count has to be set when wrapping the component.
+Your task in this lab is to create a higher order component to show warning in case the `value` of an Input component has less then x characters. The amount of minimum required characters must be provided when the Input component is wrapped.
 
-You need to fill out the `withDefaultCountProp.js`. You can see how this higher order component is used in `index.js`.
+You need to fill out the `withMinLengthValidation.js`. You can see how this higher order component is used in `index.js`.
 
 ```sh
-index.js                # Renders a Counter wrapped by withDefaultCountProp
-withDefaultCountProp.js # This should export the higher order component
+index.js                   # Renders a Counter wrapped by withMinLengthValidation
+withMinLengthValidation.js # This should export the higher order component
 ```
 
-With `npm start` you can run the application, but it will fail until you implemented `withDefaultCountProp`.
+With `npm start` you can run the application, but it will fail until you implemented `withMinLengthValidation`.
 
 ## Testing
 
@@ -26,7 +26,7 @@ To make it easier for you to complete this task, we've added snapshot tests veri
 npm run test
 ```
 
-If you haven't changed anything you should see two test failures saying `TypeError: (0 , _withDefaultCountProp2.default) is not a function` — that's because there's nothing in the `withDefaultCountProp.js` file yet!
+If you haven't changed anything you should see two test failures saying `TypeError: (0 , _withMinLengthValidation2.default) is not a function` — that's because there's nothing in the `withDefaultCountProp.js` file yet!
 
 ## License
 
