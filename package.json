@@ -13,7 +13,10 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-preset-react-app": "^2.2.0",
+    "enzyme": "^2.8.2",
+    "enzyme-to-json": "^1.5.1",
     "nodemon": "^1.11.0",
+    "react-addons-test-utils": "^15.5.1",
     "react-scripts": "canary"
   },
   "scripts": {

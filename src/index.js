@@ -1,6 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import withDefaultCountPropNine from './withDefaultCountPropNine';
+
+const Counter = ({ count }) => (
+  <div>Count: {count}</div>
+)
+
+const CounterWithDefaultNine = withDefaultCountPropNine(Counter);
+
+const App = () => (
+  <div>
+    <CounterWithDefaultNine />
+    <CounterWithDefaultNine count={22} />
+  </div>
+)
 
 ReactDOM.render(
   <App />,

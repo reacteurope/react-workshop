@@ -1,0 +1,9 @@
+exports[`test should accept a prop \`count\` which should overwrite the default 1`] = `
+<Component
+  count={12} />
+`;
+
+exports[`test should set the prop count to \`9\` by default 1`] = `
+<Component
+  count={9} />
+`;
