@@ -3,12 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "apollo-client": "^1.2.2",
+    "cors": "^2.8.3",
     "body-parser": "^1.17.1",
     "graphql": "^0.9.6",
     "graphql-server-express": "^0.7.2",
+    "graphql-tag": "^2.0.0",
     "graphql-tools": "^0.11.0",
+    "nedb-promise": "^2.0.1",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-apollo": "^1.2.0",
+    "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
+    "recompose": "^0.23.4"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
