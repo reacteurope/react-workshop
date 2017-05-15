@@ -1,6 +1,6 @@
 exports[`test should show a warning if a number value has less then 4 digits 1`] = `
 <div>
-  <Component
+  <Input
     value={42} />
   <span>
     Minimum 
@@ -12,7 +12,7 @@ exports[`test should show a warning if a number value has less then 4 digits 1`]
 
 exports[`test should show a warning if a string value has less then 4 characters 1`] = `
 <div>
-  <Component
+  <Input
     value="hi" />
   <span>
     Minimum 
@@ -24,7 +24,7 @@ exports[`test should show a warning if a string value has less then 4 characters
 
 exports[`test should show no warning if a string value has more then 4 characters 1`] = `
 <div>
-  <Component
+  <Input
     value="Ada Lovelace" />
 </div>
 `;
