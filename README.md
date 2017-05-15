@@ -1,21 +1,40 @@
-# Advanced React Workshop Labs
+# Lab #1: Children
 
-Welcome, we're happy to have you here with us in Paris! 🇫🇷🍷🥖
+Your job in this lab is to build four components: `TabGroup`, `Tab`, `TabTitle` and `TabContent`. These four components should be used like so:
 
-Before the workshop starts please make sure you can get this repository and run it locally:
-
+```html
+<TabGroup>
+	<Tab>
+		<TabTitle>Some title</TabTitle>
+		<TabContent>Some content</TabContent>
+	</Tab>
+	<Tab>
+		<TabTitle>Some title</TabTitle>
+		<TabContent>Some content</TabContent>
+	</Tab>
+	<Tab>
+		<TabTitle>Some title</TabTitle>
+		<TabContent>Some content</TabContent>
+	</Tab>
+</TabGroup>
 ```
-git clone git@github.com:reacteurope/react-workshop.git
-cd react-workshop
-npm install
-npm start
-```
 
-A browser window should open at `localhost:3000` (if not, try going to that URL manually) and you should see a welcome message. If so, you're set up and ready to go!
+The `TabTitle` of each tab should always be visible, but the content should only be shown when the tab is selected by clicking on the title.
 
-Make sure you have [`git`](https://git-scm.com/) and the latest stable version of [Node.js](https://nodejs.org/en/) installed. If any of these commands fail, please reinstall the relevant binary.
+## Tips
 
-Each lab is part of a branch which Max & Nik will announce after each presentation during the workshop.
+You should not use any CSS tricks to make this happen, we want to see a pure JavaScript solution. (brownie points for making it look good, though)
+
+The `TabGroup` needs to manage the tab selection. The trick is to pass two properties down to each `Tab`:
+
+- `selected` (Boolean): Is this the selected tab
+- `onClick` (Function): When called should select the tab that the call came from
+
+The `Tab` itself then needs to render its `Title` and `Content`, making sure to always show the `Title`, calling `props.onClick` when that is pressed and only show the `Content` when `props.selected` is `true`.
+
+## Bonus
+
+If you finish this exercise early, you can try enforcing that the `TabGroup` only has `Tab` components as children, and that the `Tab` component only has `TabTitle` and `TabContent` (and each only once) as children!
 
 ## License
 
