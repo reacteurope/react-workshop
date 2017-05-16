@@ -10,6 +10,7 @@ it('should be able render loading', () => {
 
 it('should be able render loading', done => {
   const component = mount(<Planets />);
+  // TODO make test more stable by mocking fetch
   setTimeout(() => {
     expect(component.text()).toContain('Alderaan');
     done();
