@@ -4,7 +4,7 @@ This lab is split into three parts which can be found in these branches:
 - 3-1-compose
 - 3-2-compose
 
-# Part 1
+# Part 2
 
 Your task in this lab is to create to make your App component functional by using higher order components from recompose. You need fill in the `compose` section of the `src/Favourites.js` component. The goal is to have a list app that allows you to change the image and name of the list as well as add new entries.
 
