@@ -3,7 +3,15 @@ import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Planets from '../Planets';
 
-it('should be able render all Planets', done => {
+it('should be able render loading', () => {
   const component = mount(<Planets />);
-  done();
+  expect(component.text()).toContain('Loading');
+});
+
+it('should be able render loading', done => {
+  const component = mount(<Planets />);
+  setTimeout(() => {
+    expect(component.text()).toContain('Loading');
+    done();
+  }, 1000);
 });
