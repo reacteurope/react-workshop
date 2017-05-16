@@ -1,0 +1,22 @@
+exports[`test should pass down props e.g. style to the child component 1`] = `
+<Component
+  style={
+    Object {
+      "background": "green",
+    }
+  } />
+`;
+
+exports[`test should render loading if the prop loading is set to true 1`] = `
+<div>
+  Loading 
+  …
+</div>
+`;
+
+exports[`test should render loading the original component if loading set to false or is undefined 1`] = `
+<Component
+  loading={false} />
+`;
+
+exports[`test should render loading the original component if loading set to false or is undefined 2`] = `<Component />`;
