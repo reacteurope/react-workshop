@@ -1,14 +1,14 @@
 # Lab #3: Composition
 
-This lab is split into three parts which can be found in these branches:
+This lab is split into two parts which can be found in these branches:
 - 3-1-compose
 - 3-2-compose
 
 # Part 1
 
-Your task in this lab is to create to make your Planets component load planets from the Star Wars universe. In this case the `compose` function has already one higher order component `withFetch` to fetch the data. Unfortunately it breaks since we don't handle the loading state yet. Since we are going to re-use loading screens many times we want to create a higher order component `withLoading`.
+Your task in this lab is to make your Planets component load planets from the Star Wars universe. In this case the `compose` function has already one higher order component `withFetch` to fetch the data. Unfortunately it breaks since we don't handle the loading state yet. Since we are going to re-use loading screens many times we want to create a higher order component `withLoading`.
 
-You need fill build the `withLoading` component and then use it in the `compose` section of the `src/Planets.js` component. The goal is that a loading screen is shown until the data is successfully fetched.
+You need to build the `withLoading` component and then use it in the `compose` section of the `src/Planets.js` component. The goal is that a loading screen is shown until the data is successfully fetched.
 
 With `npm start` you can run the application, but it will fail with `TypeError: Cannot read property 'map' of null`.
 
