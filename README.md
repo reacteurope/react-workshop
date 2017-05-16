@@ -17,6 +17,12 @@ Make sure you have [`git`](https://git-scm.com/) and the latest stable version o
 
 Each lab is part of a branch which Max & Nik will announce after each presentation during the workshop.
 
+## Links
+
+[Slides](http://react-europe-slides.surge.sh/#/)
+[Questions App](bit.ly/handsup-app)
+[Feedback Form](https://goo.gl/forms/85ZAH48DVWPPVY9N2)
+
 ## License
 
 Copyright (C) 2017  Maximilian Stoiber & Nikolaus Graf. You may use this repo for non-commercial use under the GPLv3 license.
