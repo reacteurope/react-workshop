@@ -1,21 +1,24 @@
-# Advanced React Workshop Labs
+# Lab #3: Composition
 
-Welcome, we're happy to have you here with us in Paris! 🇫🇷🍷🥖
+This lab is split into three parts which can be found in these branches:
+- 3-1-compose
+- 3-2-compose
 
-Before the workshop starts please make sure you can get this repository and run it locally:
+# Part 1
 
+Your task in this lab is to create to make your Planets component load planets from the Star Wars universe. In this case the `compose` function has already one higher order component `withFetch` to fetch the data. Unfortunately it breaks since we don't handle the loading state yet. Since we are going to re-use loading screens many times we want to create a higher order component `withLoading`.
+
+You need fill build the `withLoading` component and then use it in the `compose` section of the `src/Planets.js` component. The goal is that a loading screen is shown until the data is successfully fetched.
+
+With `npm start` you can run the application, but it will fail with `TypeError: Cannot read property 'map' of null`.
+
+## Testing
+
+To make it easier for you to complete this task, we've added tests verifying that you've arrived at the correct app. Initially they will fail with `TypeError: Cannot read property 'map' of null`. This command will run the tests:
+
+```sh
+npm test
 ```
-git clone git@github.com:reacteurope/react-workshop.git
-cd react-workshop
-npm install
-npm start
-```
-
-A browser window should open at `localhost:3000` (if not, try going to that URL manually) and you should see a welcome message. If so, you're set up and ready to go!
-
-Make sure you have [`git`](https://git-scm.com/) and the latest stable version of [Node.js](https://nodejs.org/en/) installed. If any of these commands fail, please reinstall the relevant binary.
-
-Each lab is part of a branch which Max & Nik will announce after each presentation during the workshop.
 
 ## License
 
