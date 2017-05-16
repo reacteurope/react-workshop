@@ -4,7 +4,7 @@ This lab is split into three parts which can be found in these branches:
 - 3-1-compose
 - 3-2-compose
 
-# Part 2
+# Part 1
 
 Your task in this lab is to create to make your Planets component load planets from the Star Wars universe. In this case the `compose` function has already one higher order component `withFetch` to fetch the data. Unfortunately it breaks since we don't handle the loading state yet. Since we are going to re-use loading screens many times we want to create a higher order component `withLoading`.
 
