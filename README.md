@@ -19,9 +19,9 @@ Each lab is part of a branch which Max & Nik will announce after each presentati
 
 ## Links
 
-[Slides](http://react-europe-slides.surge.sh/#/)
-[Questions App](bit.ly/handsup-app)
-[Feedback Form](https://goo.gl/forms/85ZAH48DVWPPVY9N2)
+- [Slides](http://react-europe-slides.surge.sh/#/)
+- [Questions App](bit.ly/handsup-app)
+- [Feedback Form](https://goo.gl/forms/85ZAH48DVWPPVY9N2)
 
 ## License
 
