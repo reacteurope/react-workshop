@@ -1,21 +1,90 @@
-# Advanced React Workshop Labs
+# Lab #4: GraphQL
 
-Welcome, we're happy to have you here with us in Paris! 🇫🇷🍷🥖
+In this lab your task is to create a GraphQL server with `graphql-tools`. We've done all the setup for you and written the necessary database queries, you just focus on the GraphQL side of things.
 
-Before the workshop starts please make sure you can get this repository and run it locally:
+There are tests verifying that you're returning the correct data, don't forget to run them!
 
+## Commands
+
+```sh
+# Start the server
+npm run server
+# Seed the server with some data so your database isn't empty
+npm run seed
+# Test the server
+npm run test
 ```
-git clone git@github.com:reacteurope/react-workshop.git
-cd react-workshop
-npm install
-npm start
+
+## Database queries
+
+We've written all the necessary database queries for you so you can focus on GraphQL:
+
+```javascript
+import { getIngredient, getIngredients } from './models/Ingredient.js';
+import { getRecipes } from './models/Recipe.js';
 ```
 
-A browser window should open at `localhost:3000` (if not, try going to that URL manually) and you should see a welcome message. If so, you're set up and ready to go!
+This is what they do:
 
-Make sure you have [`git`](https://git-scm.com/) and the latest stable version of [Node.js](https://nodejs.org/en/) installed. If any of these commands fail, please reinstall the relevant binary.
+```javascript
+// Get an ingredient with a certain id
+getIngredient(_id: String)
+// Get a list of all the ingredients
+getIngredients()
+// Get a list of all the recipes, optionally filtered by being vegetarian or an ingredient ID it contains
+getRecipes({ vegetarian?: Boolean, ingredient?: String })
+```
 
-Each lab is part of a branch which Max & Nik will announce after each presentation during the workshop.
+## GraphQL Schema
+
+### Recipe
+
+A recipe has an `_id`, a `title`, a list of `ingredients`, some `preparation` steps and might be `vegetarian`. This is what a recipe looks like in the database:
+
+```javascript
+{
+	_id: 'sdghdfg14',
+	title: 'Salad',
+	vegetarian: true,
+	ingredients: ['dfgxg3745', 'zxge3258ma'],
+	preparation: ['Get ingredients', 'Put them all in a bowl', 'Enjoy']
+}
+```
+
+> **Note:** We want to match those ingredient IDs to actual ingredients in the resolvers. Don't just send down ingredient IDs!
+
+## Ingredient
+
+An ingredient only has an `_id` and a `name`. This is what an ingredient looks like in the database:
+
+```javascript
+{
+	_id: 'dfgxg3745',
+	name: 'Salad'
+}
+```
+
+## Result
+
+When you're finished it should be able to query for a list of recipes with their ingredients and filter them by being vegetarian or not:
+
+```GraphQL
+{
+	recipes(vegetarian: true) {
+		title
+		vegetarian
+		preparation
+		ingredients {
+			name
+		}
+	}
+}
+```
+
+## Tips
+
+- Use `GraphiQL` to your advantage, go to `localhost:3001/graphiql` for fast iteration speed.
+- Write the types first, then get the resolvers for flat data to work, then finish with the resolvers for nested data (recipe.ingredients)
 
 ## License
 

@@ -1,0 +1,199 @@
+exports[`GraphQL server Mutations should allow adding a recipe 1`] = `
+Object {
+  "data": Object {
+    "addRecipe": Object {
+      "ingredients": Array [
+        Object {
+          "name": "Salad",
+        },
+      ],
+      "preparation": Array [
+        "Get ingredients",
+        "Make Salad",
+      ],
+      "title": "My favorite meal",
+      "vegetarian": true,
+    },
+  },
+}
+`;
+
+exports[`GraphQL server Mutations should allow adding an ingredient 1`] = `
+Object {
+  "data": Object {
+    "addIngredient": Object {
+      "name": "Brokkoli",
+    },
+  },
+}
+`;
+
+exports[`GraphQL server Mutations should return a list of ingredients 1`] = `
+Object {
+  "data": Object {
+    "ingredients": Array [
+      Object {
+        "_id": "123asdf",
+        "name": "Beef",
+      },
+      Object {
+        "_id": "234asdf",
+        "name": "Chicken",
+      },
+      Object {
+        "_id": "asdf123",
+        "name": "Salad",
+      },
+      Object {
+        "_id": "asdf234",
+        "name": "Salad dressing",
+      },
+    ],
+  },
+}
+`;
+
+exports[`GraphQL server Queries should filter results by ingredient ID 1`] = `
+Object {
+  "data": Object {
+    "recipes": Array [],
+  },
+}
+`;
+
+exports[`GraphQL server Queries should filter results by not vegetarianism 1`] = `
+Object {
+  "data": Object {
+    "recipes": Array [
+      Object {
+        "title": "Wiener Schnitzel",
+      },
+      Object {
+        "title": "Caesar Salad",
+      },
+    ],
+  },
+}
+`;
+
+exports[`GraphQL server Queries should filter results by vegetarianism 1`] = `
+Object {
+  "data": Object {
+    "recipes": Array [
+      Object {
+        "title": "Salad",
+      },
+    ],
+  },
+}
+`;
+
+exports[`GraphQL server Queries should return a list of recipes 1`] = `
+Object {
+  "data": Object {
+    "recipes": Array [
+      Object {
+        "preparation": Array [
+          "Get ingredients",
+          "Put beef into pan",
+          "Enjoy",
+        ],
+        "title": "Wiener Schnitzel",
+        "vegetarian": false,
+      },
+      Object {
+        "preparation": Array [
+          "Get ingredients",
+          "Put them all in a bowl",
+          "Enjoy",
+        ],
+        "title": "Caesar Salad",
+        "vegetarian": false,
+      },
+      Object {
+        "preparation": Array [
+          "Get ingredients",
+          "Put them all in a bowl",
+          "Enjoy",
+        ],
+        "title": "Salad",
+        "vegetarian": true,
+      },
+    ],
+  },
+}
+`;
+
+exports[`GraphQL server Queries should return a list of recipes with its ingredients 1`] = `
+Object {
+  "data": Object {
+    "recipes": Array [
+      Object {
+        "ingredients": Array [
+          Object {
+            "_id": "123asdf",
+            "name": "Beef",
+          },
+          Object {
+            "_id": "asdf123",
+            "name": "Salad",
+          },
+          Object {
+            "_id": "asdf234",
+            "name": "Salad dressing",
+          },
+        ],
+        "preparation": Array [
+          "Get ingredients",
+          "Put beef into pan",
+          "Enjoy",
+        ],
+        "title": "Wiener Schnitzel",
+        "vegetarian": false,
+      },
+      Object {
+        "ingredients": Array [
+          Object {
+            "_id": "234asdf",
+            "name": "Chicken",
+          },
+          Object {
+            "_id": "asdf123",
+            "name": "Salad",
+          },
+          Object {
+            "_id": "asdf234",
+            "name": "Salad dressing",
+          },
+        ],
+        "preparation": Array [
+          "Get ingredients",
+          "Put them all in a bowl",
+          "Enjoy",
+        ],
+        "title": "Caesar Salad",
+        "vegetarian": false,
+      },
+      Object {
+        "ingredients": Array [
+          Object {
+            "_id": "asdf123",
+            "name": "Salad",
+          },
+          Object {
+            "_id": "asdf234",
+            "name": "Salad dressing",
+          },
+        ],
+        "preparation": Array [
+          "Get ingredients",
+          "Put them all in a bowl",
+          "Enjoy",
+        ],
+        "title": "Salad",
+        "vegetarian": true,
+      },
+    ],
+  },
+}
+`;

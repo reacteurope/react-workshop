@@ -29,6 +29,7 @@
   "scripts": {
     "start": "react-scripts start",
     "server": "NODE_ENV=development nodemon server/index.js --watch server --exec babel-node --presets react-app",
+    "seed": "NODE_ENV=development babel-node server/models/seed.js --presets react-app",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
