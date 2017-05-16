@@ -10,11 +10,11 @@ Your task in this lab is to create to make your App component functional by usin
 
 The component is used in `index.js` with specific props. Do not change them, but rather map them to the internals of the `Favourites` component. You are able to create all the functionality with only adding code inside the `compose` function. While you can build your own higher order components we recommend to use recompose's `renameProp`, `withState` & `withHandlers`
 
-With `npm start` you can run the application, but it will fail.
+With `npm start` you can run the application, but it will fail with `TypeError: Cannot read property 'map' of undefined`.
 
 ## Testing
 
-To make it easier for you to complete this task, we've added snapshot tests verifying that you've arrived at the correct app. This command will run the tests:
+To make it easier for you to complete this task, we've added tests verifying that you've arrived at the correct app. Initially they will fail with `TypeError: Cannot read property 'map' of undefined`. This command will run the tests:
 
 ```sh
 npm run test
