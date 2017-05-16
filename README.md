@@ -19,6 +19,8 @@ Your job in this lab is to build four components: `TabGroup`, `Tab`, `TabTitle` 
 </TabGroup>
 ```
 
+**To see what it should look like at the end go to `children-solution.surge.sh`!**
+
 The `TabTitle` of each tab should always be visible, but the content should only be shown when the tab is selected by clicking on the title.
 
 ## Tips
