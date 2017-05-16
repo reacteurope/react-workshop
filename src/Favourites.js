@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { compose, withState, withHandlers, renameProp } from 'recompose';
 
-const App = ({
+const Favourites = ({
   thumbnailUrl,
   name,
   updateName,
@@ -55,4 +55,4 @@ const enhance = compose(
   })
 );
 
-export default enhance(App);
+export default enhance(Favourites);
