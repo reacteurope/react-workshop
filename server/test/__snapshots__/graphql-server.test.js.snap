@@ -56,7 +56,11 @@ Object {
 exports[`GraphQL server Queries should filter results by ingredient ID 1`] = `
 Object {
   "data": Object {
-    "recipes": Array [],
+    "recipes": Array [
+      Object {
+        "title": "Wiener Schnitzel",
+      },
+    ],
   },
 }
 `;
