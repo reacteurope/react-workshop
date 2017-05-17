@@ -14,7 +14,7 @@ import { recipeDb } from './db';
 export const getRecipes = ({ vegetarian, ingredient }) => {
   // Construct the filters
   let filters = {};
-  if (typeof vegetarian !== 'undefined') filters.vegetarian = !!vegetarian;
+  if (typeof vegetarian !== 'undefined' && vegetarian !== null) filters.vegetarian = !!vegetarian;
   if (ingredient) {
     filters.ingredients = {
       $elemMatch: ingredient
