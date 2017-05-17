@@ -2,7 +2,7 @@
 
 In this lab you have to build an app for our recipes backend! Your job is to:
 
-1. Get Apollo Client setup
+1. Setup Apollo Client
 2. Connect to the GraphQL server
 3. Display all the recipes on the page
 4. Make the recipes filterable by ingredient
