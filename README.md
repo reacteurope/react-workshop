@@ -1,22 +1,35 @@
-# Lab #5: Apollo Client (Queries)
+# Lab #5: Apollo Client
 
-In this lab your task is to setup the frontend and and enhance the Recipes component to fill with recipe data.
+In this lab you have to build an app for our recipes backend! Your job is to:
 
-## Setup the Apollo Client
+1. Setup Apollo Client
+2. Connect to the GraphQL server
+3. Display all the recipes on the page
+4. Make the recipes filterable by ingredient
 
-You first need to instantiate a client in `src/index.js`. Inject the client via ApolloProvider. One important hint: your GraphQL backend runs under `http://localhost:3001`. So when you create the client use
+## The finished app
+
+**Visit this link to see what the finished app should look like!** https://i.imgur.com/T5YTaKn.png
+
+![](https://i.imgur.com/T5YTaKn.png)
+
+## Setup Apollo Client
+
+You first need to instantiate a client in `src/index.js`. Inject the client into your app via an `ApolloProvider`. The GraphQL backend runs under `http://localhost:3001`, so you'll need to create a network interface as well:
 
 ```js
+import { createNetworkInterface } from 'react-apollo';
+
 createNetworkInterface({
   uri: 'http://localhost:3001'
 })
 ```
 
-## Fetch data from the Backend
+## Fetch data from the backend
 
-The package 'react-apollo' ships with a higher order component `graphql` which is already imported in `src/Recipes`. You should create a query to fetch all the recipes. In order to show the ingredients filter your also need to fetch all the ingredients.
+The `react-apollo` package ships with the `graphql` higher order component. Use it in `src/Recipes.js` to create a query which fetches all the recipes. In order to show the ingredients filter you'll also need to fetch all the ingredients.
 
-**Hint: you can fetch recipes and ingredients in one query.**
+> Note: You should fetch recipes and ingredients in one query.
 
 ## Commands
 
@@ -25,15 +38,15 @@ The package 'react-apollo' ships with a higher order component `graphql` which i
 npm run server
 # Seed the server with some data so your database isn't empty
 npm run seed
-# Start the local server
+# Start the frontend
 npm start
 ```
 
-If you visit the browser at http://localhost:3000 you should see this error `TypeError: Cannot read property 'loading' of undefined`.
+If you visit the browser at `http://localhost:3000` you should see this error `TypeError: Cannot read property 'loading' of undefined`.
 
 ## Tips
 
-- Again! Use `GraphiQL` to your advantage! Go to http://localhost:3001/graphiql for exploring queries.
+- Again use `GraphiQL` to your advantage! Go to http://localhost:3001/graphiql for exploring queries.
 
 ## Bonus Labs
 
