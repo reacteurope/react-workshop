@@ -1,21 +1,10 @@
 # Advanced React Workshop Labs
 
-Welcome, we're happy to have you here with us in Paris! 🇫🇷🍷🥖
+In this example we want to build a weather app.
 
-Before the workshop starts please make sure you can get this repository and run it locally:
-
-```
-git clone git@github.com:reacteurope/react-workshop.git
-cd react-workshop
-npm install
-npm start
-```
-
-A browser window should open at `localhost:3000` (if not, try going to that URL manually) and you should see a welcome message. If so, you're set up and ready to go!
-
-Make sure you have [`git`](https://git-scm.com/) and the latest stable version of [Node.js](https://nodejs.org/en/) installed. If any of these commands fail, please reinstall the relevant binary.
-
-Each lab is part of a branch which Max & Nik will announce after each presentation during the workshop.
+1. Create a GraphQL endpoint that wraps a weather REST API. You can use https://darksky.net/dev/ for example. Take a fixed location e.g. Paris.
+2. Create a list of locations (cities). They should include latitude, longitude and the city name. Expose this data via GraphQL. In the front-end people should be able to switch between locations.
+3. Allow to create users. A user can have a favourite list of locations. Once the user is authenticated they automatically fetch the weather data for all their favourite locations.
 
 ## License
 
