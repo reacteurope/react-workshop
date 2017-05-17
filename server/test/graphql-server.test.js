@@ -92,5 +92,19 @@ describe('GraphQL server', () => {
         expect(result).toMatchSnapshot();
       });
     });
+
+    it('should return a list of ingredients', () => {
+      expect.assertions(1);
+      const query = /* GraphQL */ `
+        {
+          ingredients {
+            name
+          }
+        }
+      `;
+      return graphql(schema, query).then(result => {
+        expect(result).toMatchSnapshot();
+      });
+    });
   });
 });
