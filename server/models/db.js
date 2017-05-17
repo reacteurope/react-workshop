@@ -6,12 +6,12 @@
 import Datastore from 'nedb-promise';
 
 const recipeDb = new Datastore({
-	filename: '/tmp/recipes.json',
-	autoload: true
+  filename: '/tmp/recipes.json',
+  autoload: true
 });
 const ingredientDb = new Datastore({
-	filename: '/tmp/ingredients.json',
-	autoload: true
+  filename: '/tmp/ingredients.json',
+  autoload: true
 });
 
 export { ingredientDb, recipeDb }
