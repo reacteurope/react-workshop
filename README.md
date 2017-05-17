@@ -1,23 +1,35 @@
 # Lab #6: Mutations
 
-In this lab your task is to add two mutations to the backend as well as the frontend
+In this lab your task is to make it possible to add ingredients and recipes to our app. This needs to be implemented on both the client _and_ the server!
 
-## Add Ingredient Mutation
+> Tip: Implement the backend first, make the tests pass and verify it works via GraphiQL before jumping to the frontend.
 
-You need to add `addIngredient` to your schema and resolvers. To extend the schema look for the TODO entry in `server/types/index.js`. To extend the resolvers look into `server/resolvers/index.js`. The mutation `addIngredient` should accept one argument of name which is a string.
+## Adding ingredients
 
-For the frontend we already provide you an `AddIngredient` component. There you need to fill in the GraphQL mutation.
+### Backend
 
-## Add Recipe Mutation
+You need to add an `addIngredient` mutation to your schema and resolvers. (`server/types/index.js`, `server/resolvers/index.js`) The mutation should accept a single argument, `name`, which is a `String`.
 
-You need to add `addRecipe` to your schema and resolvers. To extend the schema look for the TODO entry in `server/types/index.js`. To extend the resolvers look into `server/resolvers/index.js`. The mutation `addRecipe` should accept a more complex RecipeInput object containing:
+### Frontend
 
-1. title of type String
-2. vegetarian of type Boolean
-3. ingredients of type Array of IDs
-4. preparation of type Array of Strings
+We provide you with an `AddIngredient` component which you need to hook up with the GraphQL mutation.
 
-For the frontend we already provide you an `AddRecipe` component. There you need to fetch the ingredients to fill the <select>, but also provide the GraphQL mutation.
+## Adding recipes
+
+### Backend
+
+You need to add an `addRecipe` mutation to your schema and resolvers. (`server/types/index.js`, `server/resolvers/index.js`)
+
+The mutation should accept a more complex `RecipeInput` object as the single argument, which contains:
+
+1. A `title`, which is a string
+2. If it's `vegetarian` as a boolean
+3. It's `ingredients` as an array of ingredient IDs
+4. And the `preparation` steps as an array of strings
+
+### Frontend
+
+We already provide you with an `AddRecipe` component. You need to fetch the ingredients to fill the `<select>` and also hook it up with the GraphQL mutation.
 
 ## Commands
 
