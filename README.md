@@ -7,6 +7,12 @@ In this lab you have to build an app for our recipes backend! Your job is to:
 3. Display all the recipes on the page
 4. Make the recipes filterable by ingredient
 
+## The finished app
+
+**Visit this link to see what the finished app should look like!** https://i.imgur.com/T5YTaKn.png
+
+![](https://i.imgur.com/T5YTaKn.png)
+
 ## Setup Apollo Client
 
 You first need to instantiate a client in `src/index.js`. Inject the client into your app via an `ApolloProvider`. The GraphQL backend runs under `http://localhost:3001`, so you'll need to create a network interface as well:
