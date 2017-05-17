@@ -1,26 +1,29 @@
-# Lab #5: Apollo Client (Queries)
+# Lab #6: Mutations
 
-In this lab your task is to setup the frontend and and enhance the Recipes component to fill with recipe data.
+In this lab your task is to add two mutations to the backend as well as the frontend
 
-## Setup the Apollo Client
+## Add Ingredient Mutation
 
-You first need to instantiate a client in `src/index.js`. Inject the client via ApolloProvider. One important hint: your GraphQL backend runs under `http://localhost:3001`. So when you create the client use
+You need to add `addIngredient` to your schema and resolvers. To extend the schema look for the TODO entry in `server/types/index.js`. To extend the resolvers look into `server/resolvers/index.js`. The mutation `addIngredient` should accept one argument of name which is a string.
 
-```js
-createNetworkInterface({
-  uri: 'http://localhost:3001'
-})
-```
+For the frontend we already provide you an `AddIngredient` component. There you need to fill in the GraphQL mutation.
 
-## Fetch data from the Backend
+## Add Recipe Mutation
 
-The package 'react-apollo' ships with a higher order component `graphql` which is already imported in `src/Recipes`. You should create a query to fetch all the recipes. In order to show the ingredients filter your also need to fetch all the ingredients.
+You need to add `addRecipe` to your schema and resolvers. To extend the schema look for the TODO entry in `server/types/index.js`. To extend the resolvers look into `server/resolvers/index.js`. The mutation `addRecipe` should accept a more complex RecipeInput object containing:
 
-**Hint: you can fetch recipes and ingredients in one query.**
+1. title of type String
+2. vegetarian of type Boolean
+3. ingredients of type Array of IDs
+4. preparation of type Array of Strings
+
+For the frontend we already provide you an `AddRecipe` component. There you need to fetch the ingredients to fill the <select>, but also provide the GraphQL mutation.
 
 ## Commands
 
 ```sh
+# Run the backend tests
+npm test
 # Start the server
 npm run server
 # Seed the server with some data so your database isn't empty
@@ -33,12 +36,13 @@ If you visit the browser at http://localhost:3000 you should see this error `Typ
 
 ## Tips
 
+- Start implementing the backend first and make sure the tests are green!
 - Again! Use `GraphiQL` to your advantage! Go to http://localhost:3001/graphiql for exploring queries.
 
 ## Bonus Labs
 
-1. Remove the preparation and ingredients details from the Recipes and create a separate detail page for each Recipe. Link from the recipes list to each detail page. We already included `react-router-dom` to make it easy for you. **Hint: use `withRouter` to use url params as input variable for your query.**
-2. Add pagination to the recipes list. You can get more insights here: http://dev.apollodata.com/react/pagination.html
+1. Explore various ways how to keep the data properly in sync (update, refetchQueries, optimistic response)
+2. Follow the instructions in the branch `7-weather-app`
 
 ## License
 
