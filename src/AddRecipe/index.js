@@ -53,7 +53,7 @@ const AddRecipe = ({
     <div>
       {preparation.map((entry, index) => (
         <input
-          key={`${entry}-${index}`}
+          key={`preparation-${index}`}
           type="text"
           value={entry}
           onChange={({ target }) => {
