@@ -13,13 +13,13 @@ const GRAPHIQL_PATH = '/graphiql';
 
 const app = express();
 
-// Set up the GraphQL endpoint
-app.use(GRAPHQL_PATH, bodyParser.json(), graphqlExpress({ schema }));
-
 // Set up GraphiQL
 app.use(GRAPHIQL_PATH, graphiqlExpress({
   endpointURL: GRAPHQL_PATH,
 }));
+
+// Set up the GraphQL endpoint
+app.use(GRAPHQL_PATH, bodyParser.json(), graphqlExpress({ schema }));
 
 app.listen(PORT);
 
